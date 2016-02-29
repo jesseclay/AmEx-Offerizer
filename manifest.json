@@ -1,0 +1,38 @@
+{
+  "name": "AmEx Offerizer",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "Have all your American Express Offers added automatically eveytime you login to your AmEx online account.",
+  "homepage_url": "http://www.jesseclayburgh.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js",
+      "js/jquery/jquery.min.js"
+    ],
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "page action demo"
+  },
+  "permissions": [
+    "https://online.americanexpress.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://online.americanexpress.com/*"
+      ],
+      "run_at" : "document_idle",
+      "js": [
+        "js/jquery/jquery.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
