@@ -1,6 +1,6 @@
 {
   "name": "AmEx Offerizer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "Have all your American Express Offers added automatically eveytime you login to your AmEx online account.",
   "homepage_url": "http://www.jesseclayburgh.com",
@@ -9,6 +9,7 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "default_locale": "en",
   "background": {
     "scripts": [
       "src/bg/background.js",
